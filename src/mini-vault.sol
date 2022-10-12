@@ -43,6 +43,7 @@ contract Vault {
         balanceOf[_from] -= _shares;
     }
 
+    // mints the proper amount of shares
     function deposit(uint _amount) external {
         /*
         a = amount
@@ -65,6 +66,7 @@ contract Vault {
         token.transferFrom(msg.sender, address(this), _amount);
     }
 
+    // withdraws the proper amount of shares
     function withdraw(uint _shares) external {
         /*
         a = amount
